@@ -37,8 +37,7 @@ class LibrarySourceCode:
     # Directories in libstemmer which contain libstemmer sources (ie, not
     # examples, etc).
     LIBRARY_CORE_DIRS = ('src_c', 'runtime', 'libstemmer', 'include')
-    DEFAULT_URI = 'https://snowballstem.org/dist/libstemmer_c-%s.tar.gz' % \
-        libstemmer_c_version
+    DEFAULT_URI = '/Users/karthikarunr/Downloads/libstemmer_c-2.2.0.tar.gz'
     DEFAULT_CHECKSUM = \
         'b941d9fe9cf36b4e2f8d3873cd4d8b8775bd94867a1df8d8c001bb8b688377c3'
 
