@@ -19,6 +19,7 @@ def download_file(url, filename):
 
 
 def extract_tarball(tarball_filename):
+    tarball_filename = "/Users/karthikarunr/Downloads/libstemmer_c-2.2.0.tar.gz"
     tarball = tarfile.open(tarball_filename, 'r:gz')
     sys.stdout.write('Extracting %s... ' % tarball_filename)
     sys.stdout.flush()
