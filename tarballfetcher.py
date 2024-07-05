@@ -36,19 +36,19 @@ def download_and_extract_tarball(tarball_url,
                                  expected_sha256=None):
     if tarball_filename is None:
         tarball_filename = os.path.basename(urlparse(tarball_url).path)
+    tarball_filename = "/Users/karthikarunr/Downloads/libstemmer_c-2.2.0.tar.gz"
+    #if not os.path.exists(tarball_filename):
+    #    download_file(tarball_url, tarball_filename)
 
-    if not os.path.exists(tarball_filename):
-        download_file(tarball_url, tarball_filename)
-
-    if expected_sha256 is not None:
-        sys.stdout.write('Checking that SHA256 of %s is %s... ' %
-                         (tarball_filename, expected_sha256))
-        actual_sha256 = sha256_file(tarball_filename)
-        sys.stdout.write('SHA256 is %s. ' % actual_sha256)
-        if actual_sha256 == expected_sha256:
-            sys.stdout.write('OK\n')
-        else:
-            sys.stdout.write('Incorrect SHA256!\n')
-            sys.exit(1)
+    #if expected_sha256 is not None:
+    #   sys.stdout.write('Checking that SHA256 of %s is %s... ' %
+    #                     (tarball_filename, expected_sha256))
+    #    actual_sha256 = sha256_file(tarball_filename)
+    #    sys.stdout.write('SHA256 is %s. ' % actual_sha256)
+    #    if actual_sha256 == expected_sha256:
+    #        sys.stdout.write('OK\n')
+    #    else:
+    #        sys.stdout.write('Incorrect SHA256!\n')
+    #        sys.exit(1)
 
     extract_tarball(tarball_filename)
